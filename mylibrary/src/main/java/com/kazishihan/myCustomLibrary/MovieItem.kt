@@ -42,5 +42,4 @@ class MovieItem @JvmOverloads constructor(
     fun setPoster(url: String){
         binding.imgPoster.load(url)
     }
-    
 }

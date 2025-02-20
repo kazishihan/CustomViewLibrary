@@ -1,8 +1,8 @@
-package com.kazishihan.myCustomLibrary.minirail
+package com.kazishihan.myCustomLibrary.minirail.fragmentConfig
 
 import androidx.fragment.app.Fragment
 
-object MiniRailManager {
+internal object MiniRailManager {
     fun getInstance(title: String, items: List<String>): Fragment {
         return MiniRailFragment.builder()
             .setTitle(title)

@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <com.kazishihan.myCustomLibrary.MovieItem
         android:id="@+id/movieItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.kazishihan.myCustomLibrary.minirail.viewConfig.MinirailView
+        android:id="@+id/customRail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.kazishihan.myCustomLibrary.minirail.viewConfig.MinirailView
+        android:id="@+id/customRail2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -19,13 +38,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/miniRainContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/movieItem"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

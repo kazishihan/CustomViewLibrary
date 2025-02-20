@@ -1,4 +1,4 @@
-package com.kazishihan.myCustomLibrary.minirail
+package com.kazishihan.myCustomLibrary.minirail.fragmentConfig
 
 import android.view.LayoutInflater
 import android.view.View
