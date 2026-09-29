@@ -1,8 +1,10 @@
 package com.kazishihan.customviewlibrary
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kazishihan.customviewlibrary.databinding.ActivityMainBinding
+import com.kazishihan.myCustomLibrary.landing.LandingLibraryActivity
 import com.kazishihan.myCustomLibrary.minirail.viewConfig.MinirailViewBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
+
+        binding.openUpsButton.setOnClickListener {
+            startActivity(Intent(this, LandingLibraryActivity::class.java))
+        }
+
         setMoveItem()
         setCustomRail()
         setCustomRail2()
