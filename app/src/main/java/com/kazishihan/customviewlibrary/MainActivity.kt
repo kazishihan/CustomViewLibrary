@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
 
         setMoveItem()
         setCustomRail()
-        setCustomRail2()
     }
     
     private fun setMoveItem() {
@@ -32,22 +31,12 @@ class MainActivity : AppCompatActivity() {
     
     private fun setCustomRail() {
         val config = MinirailViewBuilder()
-            .setTitle("My Title")
-            .setItems(listOf("Item 1", "Item 2"))
+            .setTitle("Dashboard")
+            .setItems(listOf("DPS", "FDR", "FDR2", "FDR3", "FDR4"))
             .setFragmentManager(supportFragmentManager)
             .build()
         
         binding.customRail.initialize(config)
-    }
-    
-    private fun setCustomRail2() {
-        val config = MinirailViewBuilder()
-            .setTitle("My Title")
-            .setItems(listOf("Item 1", "Item 2"))
-            .setFragmentManager(supportFragmentManager)
-            .build()
-        
-        binding.customRail2.initialize(config)
     }
     
 }
