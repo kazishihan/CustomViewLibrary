@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setCustomRail() {
         val config = MinirailViewBuilder()
-            .setTitle("Dashboard")
+            .setTitle("Trending")
             .setItems(listOf("DPS", "FDR", "FDR2", "FDR3", "FDR4"))
             .setFragmentManager(supportFragmentManager)
             .build()
